@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-// Resolve the API host from the VITE_API_URL environment variable (frontend/.env).
-// Falls back to the current page's origin so development (port 5173) and
-// production (same origin as the backend) both work without extra config.
-const API_BASE = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL}/api`
-  : window.location.port === '5173'
-    ? 'http://localhost:5000/api'
-    : '/api';
+import { API_BASE } from '../api';
 
 
 
