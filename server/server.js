@@ -49,52 +49,6 @@ app.use(cors({
 }));
 
 
-// Additional origins can be supplied at deploy time
-// without editing code:
-//   CORS_ORIGINS=https://foo.com,https://bar.com
-
-const extraOrigins = (process.env.CORS_ORIGINS || '')
-  .split(',')
-  .map((entry) => entry.trim().replace(/\/+$/, ''))
-  .filter(Boolean);
-
-
-const corsWhitelist = [
-  ...allowedOrigins,
-  ...extraOrigins
-];
-
-
-app.use(
-  cors({
-
-    origin: (origin, callback) => {
-
-      // Requests with no Origin header: same-origin
-      // navigations, the widget iframe, curl, and
-      // server-to-server calls. Always permitted.
-      if (!origin) {
-        return callback(null, true);
-      }
-
-      if (corsWhitelist.includes(origin)) {
-        return callback(null, true);
-      }
-
-      console.warn(
-        `[CORS] Blocked origin: ${origin}`
-      );
-
-      // Omit the CORS headers so the browser blocks the
-      // response, rather than throwing and turning this
-      // into a 500.
-      return callback(null, false);
-
-    }
-
-  })
-);
-
 app.use(express.json());
 
 
