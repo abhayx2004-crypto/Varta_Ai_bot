@@ -1,0 +1,1540 @@
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <nav class="navbar">
+    <div class="nav-inner">
+
+      <a href="#" class="logo">
+        Event<span>Ease</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#events">Events</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="hero-badge">
+        ✦ Discover experiences worth remembering
+      </div>
+
+      <h1>
+        Find events that
+        <span>match your interests.</span>
+      </h1>
+
+      <p>
+        Explore technology meetups, creative workshops, community gatherings,
+        music nights and more — all in one place.
+      </p>
+
+      <div class="search-wrapper">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search events, workshops, locations..."
+        />
+
+        <button
+          class="search-btn"
+          onclick="searchEvents()"
+        >
+          Search
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EVENTS
+  ========================== -->
+
+  <section class="section" id="events">
+
+    <div class="section-header">
+
+      <h2>Featured Events</h2>
+
+      <p>
+        Discover experiences happening soon.
+      </p>
+
+      <div
+        class="result-count"
+        id="resultCount"
+      >
+        Showing 12 events
+      </div>
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="filters">
+
+      <button
+        class="filter active"
+        onclick="filterEvents('all', this)"
+      >
+        All
+      </button>
+
+      <button
+        class="filter"
+        onclick="filterEvents('tech', this)"
+      >
+        Technology
+      </button>
+
+      <button
+        class="filter"
+        onclick="filterEvents('business', this)"
+      >
+        Business
+      </button>
+
+      <button
+        class="filter"
+        onclick="filterEvents('creative', this)"
+      >
+        Creative
+      </button>
+
+      <button
+        class="filter"
+        onclick="filterEvents('music', this)"
+      >
+        Music
+      </button>
+
+      <button
+        class="filter"
+        onclick="filterEvents('sports', this)"
+      >
+        Sports
+      </button>
+
+      <button
+        class="filter"
+        onclick="filterEvents('community', this)"
+      >
+        Community
+      </button>
+
+    </div>
+
+
+    <!-- EVENTS GRID -->
+
+    <div class="events-grid">
+
+
+      <!-- EVENT 1 -->
+
+      <div
+        class="event-card"
+        data-category="tech"
+        onclick="showEventDetails(
+          'Future of AI Meetup',
+          '18 August',
+          '7:00 PM',
+          'Innovation Hub',
+          'Technology',
+          'Explore practical AI applications, emerging technologies and real-world projects with developers.',
+          'Meet developers, AI enthusiasts and technology professionals. The session includes discussions about generative AI, automation and modern AI tools.'
+        )"
+      >
+
+        <div class="event-image tech">
+          TECHNOLOGY
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>18 AUGUST</span>
+            <span>7:00 PM</span>
+          </div>
+
+          <h3>Future of AI Meetup</h3>
+
+          <p>
+            Explore practical AI applications, emerging technologies
+            and real-world projects with developers.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Innovation Hub
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Future of AI Meetup',
+                  '18 August',
+                  '7:00 PM',
+                  'Innovation Hub',
+                  'Technology',
+                  'Explore practical AI applications, emerging technologies and real-world projects with developers.',
+                  'Meet developers, AI enthusiasts and technology professionals. The session includes discussions about generative AI, automation and modern AI tools.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 2 -->
+
+      <div
+        class="event-card"
+        data-category="business"
+        onclick="showEventDetails(
+          'Startup Growth Workshop',
+          '21 August',
+          '10:00 AM',
+          'Business Center',
+          'Business',
+          'Learn how founders validate ideas, understand customers and build sustainable products.',
+          'This practical workshop covers customer discovery, product validation, business models and early-stage growth strategies.'
+        )"
+      >
+
+        <div class="event-image business">
+          BUSINESS
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>21 AUGUST</span>
+            <span>10:00 AM</span>
+          </div>
+
+          <h3>Startup Growth Workshop</h3>
+
+          <p>
+            Learn how founders validate ideas, understand customers
+            and build sustainable products.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Business Center
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Startup Growth Workshop',
+                  '21 August',
+                  '10:00 AM',
+                  'Business Center',
+                  'Business',
+                  'Learn how founders validate ideas, understand customers and build sustainable products.',
+                  'This practical workshop covers customer discovery, product validation, business models and early-stage growth strategies.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 3 -->
+
+      <div
+        class="event-card"
+        data-category="creative"
+        onclick="showEventDetails(
+          'Urban Photography Walk',
+          '24 August',
+          '5:30 PM',
+          'Riverside Park',
+          'Creative',
+          'A relaxed photography walk for beginners and enthusiasts exploring the city from a fresh perspective.',
+          'Participants will explore street photography techniques, composition and creative storytelling while walking through the city.'
+        )"
+      >
+
+        <div class="event-image creative">
+          CREATIVE
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>24 AUGUST</span>
+            <span>5:30 PM</span>
+          </div>
+
+          <h3>Urban Photography Walk</h3>
+
+          <p>
+            A relaxed photography walk for beginners and enthusiasts
+            exploring the city from a fresh perspective.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Riverside Park
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Urban Photography Walk',
+                  '24 August',
+                  '5:30 PM',
+                  'Riverside Park',
+                  'Creative',
+                  'A relaxed photography walk for beginners and enthusiasts exploring the city from a fresh perspective.',
+                  'Participants will explore street photography techniques, composition and creative storytelling while walking through the city.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 4 -->
+
+      <div
+        class="event-card"
+        data-category="music"
+        onclick="showEventDetails(
+          'Indie Music Evening',
+          '28 August',
+          '8:00 PM',
+          'Downtown Stage',
+          'Music',
+          'Discover talented independent artists performing live in an intimate evening of music.',
+          'Enjoy live acoustic and indie performances from emerging local artists. Food and refreshments will also be available.'
+        )"
+      >
+
+        <div class="event-image music">
+          MUSIC
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>28 AUGUST</span>
+            <span>8:00 PM</span>
+          </div>
+
+          <h3>Indie Music Evening</h3>
+
+          <p>
+            Discover talented independent artists performing live
+            in an intimate evening of music.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Downtown Stage
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Indie Music Evening',
+                  '28 August',
+                  '8:00 PM',
+                  'Downtown Stage',
+                  'Music',
+                  'Discover talented independent artists performing live in an intimate evening of music.',
+                  'Enjoy live acoustic and indie performances from emerging local artists. Food and refreshments will also be available.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 5 -->
+
+      <div
+        class="event-card"
+        data-category="creative"
+        onclick="showEventDetails(
+          'Design Thinking Lab',
+          '30 August',
+          '2:00 PM',
+          'Creative Studio',
+          'Creative',
+          'Explore user research, ideation and practical problem-solving through hands-on activities.',
+          'Work in teams to solve real-world design challenges using user research, brainstorming, prototyping and testing.'
+        )"
+      >
+
+        <div class="event-image creative">
+          CREATIVE
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>30 AUGUST</span>
+            <span>2:00 PM</span>
+          </div>
+
+          <h3>Design Thinking Lab</h3>
+
+          <p>
+            Explore user research, ideation and practical
+            problem-solving through hands-on activities.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Creative Studio
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Design Thinking Lab',
+                  '30 August',
+                  '2:00 PM',
+                  'Creative Studio',
+                  'Creative',
+                  'Explore user research, ideation and practical problem-solving through hands-on activities.',
+                  'Work in teams to solve real-world design challenges using user research, brainstorming, prototyping and testing.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 6 -->
+
+      <div
+        class="event-card"
+        data-category="tech"
+        onclick="showEventDetails(
+          'AI Builders Community',
+          '2 September',
+          '6:30 PM',
+          'Tech Square',
+          'Technology',
+          'Meet builders working on AI products and discuss tools, experiments and real-world implementations.',
+          'A community meetup for developers building AI applications. Participants can share projects, ask questions and meet other builders.'
+        )"
+      >
+
+        <div class="event-image ai">
+          TECHNOLOGY
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>2 SEPTEMBER</span>
+            <span>6:30 PM</span>
+          </div>
+
+          <h3>AI Builders Community</h3>
+
+          <p>
+            Meet builders working on AI products and discuss
+            tools, experiments and real-world implementations.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Tech Square
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'AI Builders Community',
+                  '2 September',
+                  '6:30 PM',
+                  'Tech Square',
+                  'Technology',
+                  'Meet builders working on AI products and discuss tools, experiments and real-world implementations.',
+                  'A community meetup for developers building AI applications. Participants can share projects, ask questions and meet other builders.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 7 -->
+
+      <div
+        class="event-card"
+        data-category="business"
+        onclick="showEventDetails(
+          'Founder Networking Day',
+          '5 September',
+          '11:00 AM',
+          'Venture Hall',
+          'Business',
+          'Connect with early-stage founders, product builders and entrepreneurs from different industries.',
+          'Meet entrepreneurs, startup founders and professionals. The event includes networking sessions and informal discussions.'
+        )"
+      >
+
+        <div class="event-image startup">
+          BUSINESS
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>5 SEPTEMBER</span>
+            <span>11:00 AM</span>
+          </div>
+
+          <h3>Founder Networking Day</h3>
+
+          <p>
+            Connect with early-stage founders, product builders
+            and entrepreneurs from different industries.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Venture Hall
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Founder Networking Day',
+                  '5 September',
+                  '11:00 AM',
+                  'Venture Hall',
+                  'Business',
+                  'Connect with early-stage founders, product builders and entrepreneurs from different industries.',
+                  'Meet entrepreneurs, startup founders and professionals. The event includes networking sessions and informal discussions.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 8 -->
+
+      <div
+        class="event-card"
+        data-category="music"
+        onclick="showEventDetails(
+          'Acoustic Nights',
+          '8 September',
+          '7:30 PM',
+          'Open Air Stage',
+          'Music',
+          'Enjoy acoustic performances from local artists in a relaxed community-focused evening.',
+          'A peaceful evening featuring acoustic performances, local artists and a community atmosphere.'
+        )"
+      >
+
+        <div class="event-image music">
+          MUSIC
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>8 SEPTEMBER</span>
+            <span>7:30 PM</span>
+          </div>
+
+          <h3>Acoustic Nights</h3>
+
+          <p>
+            Enjoy acoustic performances from local artists in
+            a relaxed community-focused evening.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Open Air Stage
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Acoustic Nights',
+                  '8 September',
+                  '7:30 PM',
+                  'Open Air Stage',
+                  'Music',
+                  'Enjoy acoustic performances from local artists in a relaxed community-focused evening.',
+                  'A peaceful evening featuring acoustic performances, local artists and a community atmosphere.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 9 -->
+
+      <div
+        class="event-card"
+        data-category="sports"
+        onclick="showEventDetails(
+          'City Football Meetup',
+          '12 September',
+          '6:00 PM',
+          'City Sports Ground',
+          'Sports',
+          'Join local football enthusiasts for an evening of friendly matches and community networking.',
+          'Players of different skill levels are welcome. The event focuses on friendly competition and meeting new people.'
+        )"
+      >
+
+        <div class="event-image sports">
+          SPORTS
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>12 SEPTEMBER</span>
+            <span>6:00 PM</span>
+          </div>
+
+          <h3>City Football Meetup</h3>
+
+          <p>
+            Join local football enthusiasts for an evening
+            of friendly matches and community networking.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 City Sports Ground
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'City Football Meetup',
+                  '12 September',
+                  '6:00 PM',
+                  'City Sports Ground',
+                  'Sports',
+                  'Join local football enthusiasts for an evening of friendly matches and community networking.',
+                  'Players of different skill levels are welcome. The event focuses on friendly competition and meeting new people.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 10 -->
+
+      <div
+        class="event-card"
+        data-category="community"
+        onclick="showEventDetails(
+          'Community Clean-Up Day',
+          '15 September',
+          '8:00 AM',
+          'Central Park',
+          'Community',
+          'Work together with local residents to clean and improve shared community spaces.',
+          'Volunteers will work together on cleaning, planting and improving public areas. Everyone from the local community is welcome.'
+        )"
+      >
+
+        <div class="event-image community">
+          COMMUNITY
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>15 SEPTEMBER</span>
+            <span>8:00 AM</span>
+          </div>
+
+          <h3>Community Clean-Up Day</h3>
+
+          <p>
+            Work together with local residents to clean
+            and improve shared community spaces.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Central Park
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Community Clean-Up Day',
+                  '15 September',
+                  '8:00 AM',
+                  'Central Park',
+                  'Community',
+                  'Work together with local residents to clean and improve shared community spaces.',
+                  'Volunteers will work together on cleaning, planting and improving public areas. Everyone from the local community is welcome.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 11 -->
+
+      <div
+        class="event-card"
+        data-category="tech"
+        onclick="showEventDetails(
+          'Web Development Bootcamp',
+          '18 September',
+          '10:00 AM',
+          'Digital Learning Center',
+          'Technology',
+          'A beginner-friendly workshop covering modern web development concepts and practical projects.',
+          'Learn the basics of HTML, CSS, JavaScript and modern web development through practical exercises.'
+        )"
+      >
+
+        <div class="event-image tech">
+          TECHNOLOGY
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>18 SEPTEMBER</span>
+            <span>10:00 AM</span>
+          </div>
+
+          <h3>Web Development Bootcamp</h3>
+
+          <p>
+            A beginner-friendly workshop covering modern web
+            development concepts and practical projects.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 Digital Learning Center
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Web Development Bootcamp',
+                  '18 September',
+                  '10:00 AM',
+                  'Digital Learning Center',
+                  'Technology',
+                  'A beginner-friendly workshop covering modern web development concepts and practical projects.',
+                  'Learn the basics of HTML, CSS, JavaScript and modern web development through practical exercises.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- EVENT 12 -->
+
+      <div
+        class="event-card"
+        data-category="creative"
+        onclick="showEventDetails(
+          'Creative Writing Workshop',
+          '21 September',
+          '3:00 PM',
+          'City Library',
+          'Creative',
+          'Improve storytelling and writing skills through interactive exercises and group discussions.',
+          'Participants will learn storytelling techniques, character development and creative writing exercises.'
+        )"
+      >
+
+        <div class="event-image creative">
+          CREATIVE
+        </div>
+
+        <div class="event-body">
+
+          <div class="event-meta">
+            <span>21 SEPTEMBER</span>
+            <span>3:00 PM</span>
+          </div>
+
+          <h3>Creative Writing Workshop</h3>
+
+          <p>
+            Improve storytelling and writing skills through
+            interactive exercises and group discussions.
+          </p>
+
+          <div class="event-footer">
+
+            <span class="event-location">
+              📍 City Library
+            </span>
+
+            <div class="event-actions">
+
+              <button
+                class="save-btn"
+                onclick="event.stopPropagation(); saveEvent(this)"
+              >
+                ♡
+              </button>
+
+              <button
+                class="details-btn"
+                onclick="event.stopPropagation(); showEventDetails(
+                  'Creative Writing Workshop',
+                  '21 September',
+                  '3:00 PM',
+                  'City Library',
+                  'Creative',
+                  'Improve storytelling and writing skills through interactive exercises and group discussions.',
+                  'Participants will learn storytelling techniques, character development and creative writing exercises.'
+                )"
+              >
+                Details
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="empty-state"
+      id="emptyState"
+    >
+      <h3>No events found</h3>
+      <p>Try another search or category.</p>
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       STATS
+  ========================== -->
+
+  <section class="stats">
+
+    <div class="stats-inner">
+
+      <div class="stat">
+        <h3>120+</h3>
+        <p>Events listed</p>
+      </div>
+
+      <div class="stat">
+        <h3>35</h3>
+        <p>Local communities</p>
+      </div>
+
+      <div class="stat">
+        <h3>18K+</h3>
+        <p>People discovered events</p>
+      </div>
+
+      <div class="stat">
+        <h3>4.8/5</h3>
+        <p>Average experience rating</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WHY EVENTEASE
+  ========================== -->
+
+  <section
+    class="section"
+    id="about"
+  >
+
+    <div class="section-header">
+
+      <h2>
+        Why EventEase?
+      </h2>
+
+      <p>
+        Everything you need to discover your next experience.
+      </p>
+
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          🔎
+        </div>
+
+        <h3>
+          Easy Discovery
+        </h3>
+
+        <p>
+          Find relevant events quickly without browsing through
+          dozens of unrelated listings.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          📅
+        </div>
+
+        <h3>
+          Stay Organized
+        </h3>
+
+        <p>
+          Keep workshops, meetups and activities in one simple
+          and convenient place.
+        </p>
+
+      </div>
+
+
+      <div class="why-card">
+
+        <div class="why-icon">
+          🤝
+        </div>
+
+        <h3>
+          Find Communities
+        </h3>
+
+        <p>
+          Discover people and communities that share your interests
+          and passions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRICING
+  ========================== -->
+
+  <section
+    class="pricing-section"
+    id="pricing"
+  >
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+
+        <h3>
+          Explorer
+        </h3>
+
+        <div class="price">
+          ₹0 <span>/ month</span>
+        </div>
+
+        <p class="pricing-description">
+          Great for casual event discovery.
+        </p>
+
+        <ul class="pricing-list">
+          <li>✓ Browse upcoming events</li>
+          <li>✓ Search and filter events</li>
+          <li>✓ Save favorite events</li>
+          <li>✓ Community access</li>
+        </ul>
+
+        <button
+          class="pricing-button"
+          onclick="showToast('Explorer plan selected.')"
+        >
+          Get Started
+        </button>
+
+      </div>
+
+
+      <div class="pricing-card featured">
+
+        <div class="popular-badge">
+          MOST POPULAR
+        </div>
+
+        <h3>
+          Plus
+        </h3>
+
+        <div class="price">
+          ₹299 <span>/ month</span>
+        </div>
+
+        <p class="pricing-description">
+          More tools for frequent event-goers.
+        </p>
+
+        <ul class="pricing-list">
+          <li>✓ Everything in Explorer</li>
+          <li>✓ Priority event registration</li>
+          <li>✓ Personalized recommendations</li>
+          <li>✓ Early access to selected events</li>
+        </ul>
+
+        <button
+          class="pricing-button"
+          onclick="showToast('Plus plan selected.')"
+        >
+          Start Plus
+        </button>
+
+      </div>
+
+
+      <div class="pricing-card">
+
+        <h3>
+          Community
+        </h3>
+
+        <div class="price">
+          ₹799 <span>/ month</span>
+        </div>
+
+        <p class="pricing-description">
+          Designed for event organizers and communities.
+        </p>
+
+        <ul class="pricing-list">
+          <li>✓ Create event listings</li>
+          <li>✓ Audience insights</li>
+          <li>✓ Organizer tools</li>
+          <li>✓ Priority support</li>
+        </ul>
+
+        <button
+          class="pricing-button"
+          onclick="showToast('Community plan selected.')"
+        >
+          Contact Sales
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================== -->
+
+  <section class="section">
+
+    <div class="cta">
+
+      <h2>
+        Ready to discover something new?
+      </h2>
+
+      <p>
+        Explore upcoming experiences and find an event
+        that fits your interests.
+      </p>
+
+      <button
+        onclick="document.getElementById('events').scrollIntoView()"
+      >
+        Explore Events
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section
+    class="section"
+    id="contact"
+  >
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+
+        <h2>
+          Get in Touch
+        </h2>
+
+        <p>
+          Have a question, want to list an event, or need help
+          with your account? Reach out to the EventEase team.
+        </p>
+
+        <div class="contact-item">
+          <strong>📧 Email</strong>
+          <p>hello@eventease.example</p>
+        </div>
+
+        <div class="contact-item">
+          <strong>📞 Phone</strong>
+          <p>+91 98765 43210</p>
+        </div>
+
+        <div class="contact-item">
+          <strong>📍 Office</strong>
+          <p>21 Innovation Avenue, Bengaluru, India</p>
+        </div>
+
+        <div class="contact-item">
+          <strong>🕐 Support Hours</strong>
+          <p>Monday – Friday, 9:00 AM – 6:00 PM</p>
+        </div>
+
+        <div class="socials">
+
+          <a
+            class="social"
+            href="https://instagram.com/eventease_official"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            class="social"
+            href="https://linkedin.com/company/eventease-official"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            class="social"
+            href="https://x.com/eventease_app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            X
+          </a>
+
+          <a
+            class="social"
+            href="https://facebook.com/eventeaseofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="contact-form">
+
+        <h2>
+          Send a Message
+        </h2>
+
+        <form onsubmit="submitContact(event)">
+
+          <input
+            type="text"
+            id="contactName"
+            placeholder="Your name"
+            required
+          />
+
+          <input
+            type="email"
+            id="contactEmail"
+            placeholder="Your email"
+            required
+          />
+
+          <textarea
+            id="contactMessage"
+            placeholder="How can we help?"
+            required
+          ></textarea>
+
+          <button type="submit">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div>
+
+        <div class="footer-brand">
+          EventEase
+        </div>
+
+        <p>
+          Discover. Explore. Experience.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="#events">
+          Events
+        </a>
+
+        <a href="#pricing">
+          Pricing
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       EVENT DETAILS MODAL
+  ========================== -->
+
+  <div
+    class="modal-overlay"
+    id="eventModal"
+  >
+
+    <div class="event-modal">
+
+      <button
+        class="modal-close"
+        onclick="closeEventModal()"
+      >
+        ×
+      </button>
+
+      <span
+        id="modalCategory"
+        class="modal-category"
+      ></span>
+
+      <h2
+        id="modalTitle"
+      ></h2>
+
+      <div class="modal-info">
+
+        <span id="modalDate"></span>
+
+        <span id="modalTime"></span>
+
+        <span id="modalLocation"></span>
+
+      </div>
+
+      <p
+        id="modalDescription"
+        class="modal-description"
+      ></p>
+
+      <div class="modal-extra">
+
+        <h4>
+          About this event
+        </h4>
+
+        <p
+          id="modalExtra"
+        ></p>
+
+      </div>
+
+      <button
+        id="registerButton"
+        class="register-btn"
+      >
+        Register for Event
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       TOAST
+  ========================== -->
+
+  <div
+    id="toast"
+    class="toast"
+  ></div>

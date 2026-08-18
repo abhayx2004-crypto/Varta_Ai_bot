@@ -662,31 +662,13 @@ politely explain that you are the EventEase AI assistant.
 
 
 // =====================================================
-// EVENTEASE HOMEPAGE
-// =====================================================
-
-const eventEasePath =
-  path.join(
-    __dirname,
-    '..',
-    'index.html'
-  );
-
-
-app.get(
-  '/',
-  (req, res) => {
-
-    res.sendFile(
-      eventEasePath
-    );
-
-  }
-);
-
-
-// =====================================================
 // REACT FRONTEND
+// =====================================================
+//
+// The EventEase website now lives inside the React app
+// (frontend/), so in production the home route is served
+// from the built frontend (frontend/dist).
+//
 // =====================================================
 
 const frontendBuildPath =
