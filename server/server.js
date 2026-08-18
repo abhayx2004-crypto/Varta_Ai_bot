@@ -44,11 +44,9 @@ app.use(
 // puts in the `Origin` header.
 //
 
-const allowedOrigins = [
-  'https://varta-ai-bot.vercel.app',
-  'http://localhost:5173',
-  'http://localhost:5000'
-];
+app.use(cors({
+  origin: '*'
+}));
 
 
 // Additional origins can be supplied at deploy time
