@@ -1,0 +1,12 @@
+.env
+node_modules/
+
+server/.env
+frontend/.env
+
+frontend/node_modules/
+server/node_modules/
+
+frontend/dist/
+
+*.log
