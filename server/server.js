@@ -29,7 +29,73 @@ app.use(
   })
 );
 
-app.use(cors());
+// =====================================================
+// CORS
+// =====================================================
+//
+// The widget runs in an iframe served by this backend, so
+// those calls are same-origin and never reach CORS. This
+// list is for browsers that load the React frontend from a
+// different origin - the Vercel deployment, or the Vite
+// dev server during development.
+//
+// Entries must be scheme + host only (no trailing slash,
+// no path), because that is exactly the shape a browser
+// puts in the `Origin` header.
+//
+
+const allowedOrigins = [
+  'https://varta-ai-bot.vercel.app',
+  'http://localhost:5173',
+  'http://localhost:5000'
+];
+
+
+// Additional origins can be supplied at deploy time
+// without editing code:
+//   CORS_ORIGINS=https://foo.com,https://bar.com
+
+const extraOrigins = (process.env.CORS_ORIGINS || '')
+  .split(',')
+  .map((entry) => entry.trim().replace(/\/+$/, ''))
+  .filter(Boolean);
+
+
+const corsWhitelist = [
+  ...allowedOrigins,
+  ...extraOrigins
+];
+
+
+app.use(
+  cors({
+
+    origin: (origin, callback) => {
+
+      // Requests with no Origin header: same-origin
+      // navigations, the widget iframe, curl, and
+      // server-to-server calls. Always permitted.
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      if (corsWhitelist.includes(origin)) {
+        return callback(null, true);
+      }
+
+      console.warn(
+        `[CORS] Blocked origin: ${origin}`
+      );
+
+      // Omit the CORS headers so the browser blocks the
+      // response, rather than throwing and turning this
+      // into a 500.
+      return callback(null, false);
+
+    }
+
+  })
+);
 
 app.use(express.json());
 
